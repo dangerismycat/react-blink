@@ -1,7 +1,7 @@
-import React from 'react';
+import React, { PropTypes } from 'react';
 
 
-const BLINK_INTERVAL = 750;
+const DEFAULT_INTERVAL = 750;
 
 function toggleBlinkProp(prevState) {
   return { on: !prevState.on };
@@ -9,14 +9,15 @@ function toggleBlinkProp(prevState) {
 
 
 class Blink extends React.Component {
-  constructor(props) {
-    super(props);
+  constructor(...args) {
+    super(...args);
     this.state = { on: true };
     this.toggleBlink = this.toggleBlink.bind(this);
   }
 
   componentDidMount() {
-    this.timer = setInterval(this.toggleBlink, BLINK_INTERVAL);
+    const interval = this.props.interval || DEFAULT_INTERVAL;
+    this.timer = setInterval(this.toggleBlink, interval);
   }
 
   componentWillUnmount() {
@@ -37,5 +38,9 @@ class Blink extends React.Component {
     );
   }
 }
+
+Blink.propTypes = {
+  interval: PropTypes.number,
+};
 
 export default Blink;
