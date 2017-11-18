@@ -1,12 +1,16 @@
 import React from 'react';
+import { configure } from 'enzyme';
+import Adapter from 'enzyme-adapter-react-16';
 import { mount } from 'enzyme';
 import toJson from 'enzyme-to-json';
 
 import Blink, { toggleBlinkProp } from './blink';
 
+configure({ adapter: new Adapter() });
+
 
 describe('Blink', () => {
-  it('works with an interval prop', () => {
+  describe('works with an interval prop', () => {
     const props = { interval: 1000 };
 
     const wrapper = mount(<Blink {...props} />);
@@ -20,7 +24,7 @@ describe('Blink', () => {
     });
   });
 
-  it('works without an interval prop', () => {
+  describe('works without an interval prop', () => {
     const wrapper = mount(<Blink />);
 
     it('renders without blowing up', () => {

@@ -1,9 +1,11 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
+import 'raf/polyfill';
 
 
 const DEFAULT_INTERVAL = 750;
 
-function toggleBlinkProp(prevState) {
+export function toggleBlinkProp(prevState) {
   return { on: !prevState.on };
 }
 

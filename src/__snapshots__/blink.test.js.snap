@@ -1,0 +1,27 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Blink works with an interval prop matches previous snapshot 1`] = `
+<Blink
+  interval={1000}
+>
+  <div
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+</Blink>
+`;
+
+exports[`Blink works without an interval prop matches previous snapshot 1`] = `
+<Blink>
+  <div
+    style={
+      Object {
+        "opacity": 1,
+      }
+    }
+  />
+</Blink>
+`;
