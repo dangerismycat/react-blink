@@ -1,10 +1,9 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React, { PropTypes } from 'react';
 
 
 const DEFAULT_INTERVAL = 750;
 
-export function toggleBlinkProp(prevState) {
+function toggleBlinkProp(prevState) {
   return { on: !prevState.on };
 }
 
