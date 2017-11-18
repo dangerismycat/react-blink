@@ -1,0 +1,36 @@
+{
+  "name": "react-blink",
+  "version": "1.0.0",
+  "description": "Because React needs a <blink> tag.",
+  "main": "blink.js",
+  "scripts": {
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dangerismycat/react-blink.git"
+  },
+  "keywords": [
+    "react",
+    "blink",
+    "blink-tag"
+  ],
+  "author": "Ryan James",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dangerismycat/react-blink/issues"
+  },
+  "homepage": "https://github.com/dangerismycat/react-blink#readme",
+  "devDependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babel-preset-react": "^6.24.1",
+    "enzyme": "^3.2.0",
+    "enzyme-to-json": "^3.2.2",
+    "jest": "^21.2.1"
+  },
+  "dependencies": {
+    "prop-types": "^15.6.0",
+    "react": "^16.1.1"
+  }
+}
